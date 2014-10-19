@@ -1,0 +1,1 @@
+//Elimina actividad de base de datos.
