@@ -13,7 +13,7 @@ private:
 public:
 //Constructor.
 	User();
-	User(string sName, string sEmail, string sPassword);
+	User(string sName, string sEmail, string sPassword, bool bAdmin);
 //Modif.
 	void setName(string sName);
 	void setEmail(string sEmail);
@@ -24,6 +24,7 @@ public:
 	string getEmail();
 	string getPassword();
 	Itinerary getLastItinerary();
+	bool getAdmin();
 //Other
 	void push();
 };
@@ -32,12 +33,14 @@ User::User()
 	sName="";
 	sEmail="";
 	sPassword="";
+	bAdmin=false;
 }
-User::User(string sName, string sEmail, string sPassword)
+User::User(string sName, string sEmail, string sPassword, bAdmin)
 {
 	this->sName=sName;
 	this->sEmail=sEmail;
 	this->sPassword=sPassword;
+	this->bAdmin=bAdmin;
 }
 void User::setName(string sName)
 {
@@ -70,6 +73,10 @@ string User::getPassword()
 Itinerary User::getLastItinerary()
 {
 	return itLastItinerary;
+}
+bool User::getAdmin()
+{
+	return bAdmin;
 }
 void User::push()
 {
