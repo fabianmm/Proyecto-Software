@@ -1,1 +1,0 @@
-//Reacomodo de actividad.
