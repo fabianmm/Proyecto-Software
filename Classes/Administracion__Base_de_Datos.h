@@ -1,1 +1,1 @@
-//Elimina actividad de base de datos.
+//Crea/Modifica/Elimina Cuidades/Actividad en base de datos.
