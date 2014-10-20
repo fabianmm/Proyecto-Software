@@ -1,0 +1,6 @@
+#ifndef HOUR_H_INCLUDED
+#define HOUR_H_INCLUDED
+
+
+
+#endif // HOUR_H_INCLUDED
