@@ -1,1 +1,0 @@
-//Valida informacion, como saber si existe el usuario, contrasena correcta, o si es admin o no, etc.

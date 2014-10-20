@@ -1,1 +1,6 @@
-//Crea/Modifica/Elimina Itinerarios.
+#ifndef ITINERARIO_H_INCLUDED
+#define ITINERARIO_H_INCLUDED
+
+
+
+#endif // ITINERARIO_H_INCLUDED
