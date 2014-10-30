@@ -3,8 +3,10 @@
 class Event
 {
 private:
-    string name, day;
-    Hour start, finish;
+    string name;
+    string day;
+    Hour start
+    Hour finish;
     int time;
 public:
     Event()
