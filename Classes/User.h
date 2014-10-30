@@ -1,6 +1,3 @@
-#ifndef USER_H_INCLUDED
-#define USER_H_INCLUDED
-
 #include "Itinerary"
 
 class User
@@ -13,7 +10,7 @@ private:
 public:
 //Constructor.
 	User();
-	User(string sName, string sEmail, string sPassword, bool bAdmin);
+	User(string sName, string sEmail, string sPassword);
 //Modif.
 	void setName(string sName);
 	void setEmail(string sEmail);
@@ -24,9 +21,9 @@ public:
 	string getEmail();
 	string getPassword();
 	Itinerary getLastItinerary();
-	bool getAdmin();
+	bool isAdmin();
 //Other
-	void push();
+	//void push();
 };
 User::User()
 {
@@ -35,12 +32,11 @@ User::User()
 	sPassword="";
 	bAdmin=false;
 }
-User::User(string sName, string sEmail, string sPassword, bAdmin)
+User::User(string sName, string sEmail, string sPassword)
 {
 	this->sName=sName;
 	this->sEmail=sEmail;
 	this->sPassword=sPassword;
-	this->bAdmin=bAdmin;
 }
 void User::setName(string sName)
 {
@@ -74,12 +70,12 @@ Itinerary User::getLastItinerary()
 {
 	return itLastItinerary;
 }
-bool User::getAdmin()
+bool User::isAdmin()
 {
 	return bAdmin;
 }
-void User::push()
+/*void User::push()
 {
-	//Funcion Push??
-}
-#endif // USER_H_INCLUDED
+	//Funcion Push?? 
+    //es para meter al archivo pero vamos a checar si se hace desde aqui o desde la aplicacion
+}*/
