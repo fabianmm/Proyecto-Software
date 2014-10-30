@@ -37,7 +37,7 @@ void setFreeHours(int iFHours){
 	iFreeHours = iFHours;
 }
 void setEventList(Event eEvent){
-	vEventList.PUSH_BACK(eEvent);
+	vEventList.push_back(eEvent);
 }
 //Access
 string getDayName(){
