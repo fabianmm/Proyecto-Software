@@ -10,15 +10,15 @@ public:
     //Days attribute is public for easier manipulation
     vector<Day> vDays;
     //Access
-    string getName();
-    string getCity();
-    Date getArrival();
-    Date getDeparture();
+    string getName(){return sName;};
+    string getCity(){return sCity};
+    Date getArrival(){return dArrival;};
+    Date getDeparture(){return dDeparture;};
     //Modifiers
-    void setName(string);
-    void setCity(string);
-    void setArrival(Date);
-    void setDeparture(Date);
+    void setName(string){sName=name;};
+    void setCity(string){sCity=city};
+    void setArrival(Date){dArrival=arrival;};
+    void setDeparture(Date){dDeparture=departure;};
     //Other
     int totalFreeHours();
     void print();
@@ -42,37 +42,6 @@ Itinerary::Itinerary(string name, string city, Date arrival, Date departure){
     dDeparture = departure;
 }
 
-string Itinerary::getName(){
-    return sName;
-}
-
-string Itinerary::getCity(){
-    return sCity;
-}
-
-Date Itinerary::getArrival(){
-    return dArrival;
-}
-
-Date Itinerary::getDeparture(){
-    return dDeparture;
-}
-
-void Itinerary::setName(string name){
-    sName = name;
-}
-
-void Itinerary::setCity(string city){
-    sCity = city;
-}
-
-void Itinerary::setDeparture(Date departure){
-    dDeparture = departure;
-}
-
-void Itinerary::setArrival(Date arrival){
-    dArrival = arrival;
-}
 
 int Itinerary::totalFreeHours(){
     int hours = 0;
