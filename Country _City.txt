@@ -8,112 +8,77 @@ Japan - Kyoto:
 	*Activity: Sight-Seeing and some hiking.
 	*Location: 68 Fukakusa Yabunouchicho, Fushimi-ku, Kyoto, Kyoto Prefecture 612-0882, Japan.
 	*Estimated time: 6 hours.
-
+	*Days Available: Mon, Tue, Wen, Thu, Fri, Sat.
 
 -"Zenrinji-temple, Eikan-do"
 	*Description:
 	*Type: (Cultural) -
 	*Activity: Sight-Seeing.
 	*Location: 48 Eikandocho, Sakyo-ku, Kyoto, Kyoto Prefecture 606-8445, Japan
-	*Estimated-Time:
+	*Estimated-Time: 3 hours.
+	*Days Available: Mon, Tue, Wen, Thu, Fri, Sat.
 
 -"Kinkaku-ji Temple"
-	*Description: One of Kyoto's most famous attractions, this temple was originally built in 1397 as a residence for shogun Ashikaga Yoshimitsu. The structure was completely covered in gold leaf, earning it the name Golden Pavilion. 
+	*Description: One of Kyoto's most famous attractions, this temple was originally built in 1397 as a residence for shogun 	Ashikaga Yoshimitsu. The structure was completely covered in gold leaf, earning it the name Golden Pavilion. 
 	*Type: (Cultural) - Religious Sites
 	*Activity: Sight-Seeing.
 	*Location:1 Kinkakuji-cho, Kita-ku, Kyoto, Kyoto Prefecture 603-8361, Japan
-	*Estimated-Time:
+	*Estimated-Time: 3 hours.
+	*Days Available: Thu, Fri, Sat.
 
 -"Sanjusangendo Hall"
-	*Description: Sanjusangendo contains one of the greatest examples of religious art in the world.  It was once part of a large Buddhist complex known as the Rengeoin ["Lotus King Temple"].  The hall is dedicated to Kannon, the Buddhist divinity that is believed to assist humans in distress and lead them to enlightenment.  Kannon traditionally is believed to assume any of thirty-three forms to be of aid, hence the building symbolically  has thirty-three bays and is called the thirty-three ["sanju-san"] bay ["gen"] hall ["do"].
+	*Description: Sanjusangendo contains one of the greatest examples of religious art in the world.  It was once part of a large 	Buddhist complex known as the Rengeoin ["Lotus King Temple"].  The hall is dedicated to Kannon, the Buddhist divinity that 		is believed to assist humans in distress and lead them to enlightenment.  Kannon traditionally is believed to assume any 	 of thirty-three forms to be of aid, hence the building symbolically  has thirty-three bays and is called the thirty-three ["sanju-san"] bay ["gen"] hall ["do"].
 	*Type: (Cultural) - Historic Sites, Religious Sites
 	*Activity: Sight-Seeing.
 	*Location: 657 Sanjusangendo Mawaricho, Kyoto, Kyoto Prefecture 605-0941, Japan
-	*Estimated-Time:
-
+	*Estimated-Time: 2 hours.
+	*Days Available: Mon, Tue, Wen, Thu, Fri.
 -"Shugakuin Imperial Villa"
 	*Description: Created as an imperial summer retreat, the garden complex is a fine example of Japanese landscape design.
 	*Type: (Cultural) - Historic Sites, Gardens
 	*Activity: Sight-Seeing.
 	*Location: 1-3 Shugakuin-yabusoe, Sakyo-ku, Kyoto, Kyoto Prefecture 602-8611　, Japan
-	*Estimated-Time:
-
+	*Estimated-Time: 3 hours.
+	*Days Available: Mon, Tue, Thu, Fri.
 
 -"Kiyomizu-dera Temple"
-	*Description: This most-visited temple in Kyoto was built to honor Kannon, the goddess of mercy. It's beautiful hillside location offers spectacular views of the city and valley below.
+	*Description: This most-visited temple in Kyoto was built to honor Kannon, the goddess of mercy. It's beautiful hillside 		location offers spectacular views of the city and valley below.
 	*Type: (Cultural) - Religious Sites, Lookouts, Landmarks/ Points of Interest
 	*Activity: Sight-Seeing.
 	*Location: 1-294 Kiyomizu, Higashiyama-ku, Kyoto, Kyoto Prefecture 605-0862, Japan.
-	*Estimated-Time:
+	*Estimated-Time: 5 hours.
+	*Days Available: Mon, Tue, Wen, Thu, Fri, Sat.
 
 -"Ninna-ji Temple"
-	*Description:
+	*Description: It's a sight seeing Temple from the Edo Era with amazing structures and beautiful and relaxing spaces.
 	*Type: (Cultural) - Religious Sites.
 	*Activity: Sight-Seeing.
 	*Location: 33 Omuro Ouchi, Kyoto, Kyoto Prefecture 616-8092, Japan
-	*Estimated-Time:
+	*Estimated-Time: 3 hours.
+	*Days Available: Mon, Tue, Wen, Thu, Fri, Sat.
 
 -"Ginkaku-ji Temple"
-	*Description: Built in 1482 by the shogun Ashikaga Yoshimasa, this Zen temple was supposed to have been finished in a coat of silver. Although this step never occurred, the temple is still known by the name Silver Pavilion. 
+	*Description: Built in 1482 by the shogun Ashikaga Yoshimasa, this Zen temple was supposed to have been finished in a coat of 	silver. Although this step never occurred, the temple is still known by the name Silver Pavilion. 
 	*Type: (Cultural) - Religious Sites
 	*Activity: Sight-Seeing.
 	*Location: 2 Ginkakuji-cho Sakyo-ku, Kyoto, Kyoto Prefecture 606-8402, Japan
-	*Estimated-Time:
+	*Estimated-Time: 6 hours.
+	*Days Available: Mon, Tue, Thu, Sat.
 
--"Name of activity"
-	*Description:
-	*Type:
-	*Activity:
-	*Location:
-	*Estimated-Time:
+-"Toei Kyoto Studio Park (Toei Uzumasa Eigamura)"
+	*Description: It's an amazing studio park where several japanese movies have been filmed, now it's more of a theme park where 	kids can take samurai and ninja "sessions", with other theatre activities and amazing Edo era buildings.
+	*Type: Amusement/ Theme Parks
+	*Activity: Sight- Seeing, Food, Cultural movie aspects, Samurai "shows", ninja sessions(Mostly liked by younger persons).
+	*Location: 10 Higashi-Hachigaokacho, Uzumasa, Ukyo-ku, Kyoto, Kyoto Prefecture 616-8586, Japan
+	*Estimated-Time: 5 hours.
+	*Days Available: Tue, Thu, Fri, Sat.
 
--"Name of activity"
-	*Description:
-	*Type:
-	*Activity:
-	*Location:
-	*Estimated-Time:
-
--"Name of activity"
-	*Description:
-	*Type:
-	*Activity:
-	*Location:
-	*Estimated-Time:
-
--"Name of activity"
-	*Description:
-	*Type:
-	*Activity:
-	*Location:
-	*Estimated-Time:
-
--"Name of activity"
-	*Description:
-	*Type:
-	*Activity:
-	*Location:
-	*Estimated-Time:
-
--"Name of activity"
-	*Description:
-	*Type:
-	*Activity:
-	*Location:
-	*Estimated-Time:
-
--"Name of activity"
-	*Description:
-	*Type:
-	*Activity:
-	*Location:
-	*Estimated-Time:
-
--"Name of activity"
-	*Description:
-	*Type:
-	*Activity:
-	*Location:
-	*Estimated-Time:
+-"WAK (Sushi, Tea, Sake)"
+	*Description: Learn to make sushi and tempura in the kitchen of a local home with WAK, the Women’s Association of Kyoto, who 	also offer calligraphy, tea-ceremony, sake-tasting and kimono-wearing classes.
+	*Type: Recreative, Cultural, Sessions.
+	*Activity: Learn how to make Sushi with a well prepared tea ceremony and some sake!
+	*Location: Women’s Association of Kyoto(WAK).
+	*Estimated-Time: 6-8 hours.
+	*Days Available: Mon, Wen, Fri
 
 =================================================================================================================================
