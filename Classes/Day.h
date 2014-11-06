@@ -1,51 +1,63 @@
-#include <vector>
 #include "Event.h"
 
 class Day
 {
 public:
-//Consutructors
-	Day(string sDName, int iFHours);
-	Day();
-//Modify
-	void setDayName(string sDName);
-	void setFreeHours(int iFHours);
-	void setEventList(Event eEvent);
-//Access
-	string getDayName();
-	int getFreHours();
-	Event getEventFromList(int eID);//Returns an specific object of type "Event"(If needed).
-//Attributes
-	string sDayName;
-	int iFreeHours;
-	std::vector<Event> vEventList;
+    //Consutructors
+    Day(string sDName, int iFHours);
+    Day();
+    //Modify
+    void setDayName(string sDName);
+    void setFreeHours(int iFHours);
+    void setEventList(Event eEvent);
+    //Access
+    string getDayName();
+    int getFreHours();
+    Event getEventFromList(int eID);//Returns an specific object of type "Event"(If needed).
+    //Attributes
+    string sDayName;
+    int iFreeHours;
+    vector<Event> vEventList;
+    
+    //Print
+    void print();
 };
 //Constructors
 Day::Day(){
-	sDayName = "";
-	iFreeHours = 0;
+    sDayName = "";
+    iFreeHours = 0;
 }
 Day::Day(string sDName, int iFHours){
-	sDayName = sDName;
-	iFreeHours = iFHours;
+    sDayName = sDName;
+    iFreeHours = iFHours;
 }
 //Modify
-void setDayName(string sDName){
-	sDayName = sDName;
+void Day::setDayName(string sDName){
+    sDayName = sDName;
 }
-void setFreeHours(int iFHours){
-	iFreeHours = iFHours;
+void Day::setFreeHours(int iFHours){
+    iFreeHours = iFHours;
 }
-void setEventList(Event eEvent){
-	vEventList.push_back(eEvent);
+void Day::setEventList(Event eEvent){
+    vEventList.push_back(eEvent);
 }
 //Access
-string getDayName(){
-	return sDayName;
+string Day::getDayName(){
+    return sDayName;
 }
-int getFreHours(){
-	return iFreeHours;
+int Day::getFreHours(){
+    return iFreeHours;
 }
-Event getEventFromList(int eID){
-	return vEventList[eID];
+Event Day::getEventFromList(int eID){
+    return vEventList[eID];
+}
+
+void Day::print()
+{
+    //cout << sDayName << endl;
+    for (int i = 0; i < vEventList.size(); i++)
+    {
+        vEventList[i].print();
+        cout << endl;
+    }
 }

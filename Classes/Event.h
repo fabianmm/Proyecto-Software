@@ -61,9 +61,17 @@ int Event::getTime()
 }
 void Event::print()
 {
-    cout << "Event Name: " << name << endl;
-    cout << "Day: " << day << endl;
-    cout << "Starting time: " << start.hour << ":" << start.minute<< endl;
-    cout << "Finish time: " << finish.hour << ":" << finish.minute << endl;
+    cout << name << endl;
+    //cout << "Day: " << day << endl;
+    cout << "Starting time: " << start.hour << ":";
+    if (start.minutes == 0)
+        cout << "00" << endl;
+    else
+        cout << start.minutes << endl;
+    cout << "Finish time: " << finish.hour << ":";
+    if (finish.minutes == 0)
+        cout << "00" << endl;
+    else
+        cout << finish.minutes << endl;
     cout << "Total time: " << time << endl;
 }

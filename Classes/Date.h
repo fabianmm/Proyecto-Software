@@ -9,7 +9,7 @@ string dayOfWeek(Date d){ //regresar dia de la semana
     int y = d.year;
     y -= d.month < 3;
     int day = (y + y/4 - y/100 + y/400 + t[d.month - 1] + d.day) % 7;
-    switch (d){
+    switch (day){
         case 0:
             return "sunday";
         case 1:
