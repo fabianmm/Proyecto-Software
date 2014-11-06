@@ -1,0 +1,23 @@
+San Francisco
+Golden Gate Bridge
+120
+Union Square Shopping
+210
+Twin Peaks
+60
+Alcatraz
+180
+Fisherman’s Warf
+120
+Pier39
+90
+Chinatown
+120
+City Hall
+30
+Golden Gate Park
+60
+Japanese Tea Garden
+60
+Twitter Visit
+30
