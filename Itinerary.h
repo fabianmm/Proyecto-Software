@@ -1,3 +1,6 @@
+#ifndef ITINERARY_H_INCLUDED
+#define ITINERARY_H_INCLUDED
+
 #include <vector>
 #include "Date.h"
 #include "Day.h"
@@ -11,14 +14,14 @@ public:
     vector<Day> vDays;
     //Access
     string getName(){return sName;};
-    string getCity(){return sCity};
+    string getCity(){return sCity;};
     Date getArrival(){return dArrival;};
     Date getDeparture(){return dDeparture;};
     //Modifiers
-    void setName(string){sName=name;};
-    void setCity(string){sCity=city};
-    void setArrival(Date){dArrival=arrival;};
-    void setDeparture(Date){dDeparture=departure;};
+    void setName(string name){sName=name;};
+    void setCity(string city){sCity=city;};
+    void setArrival(Date arrival){dArrival=arrival;};
+    void setDeparture(Date departure){dDeparture=departure;};
     //Other
     int totalFreeHours();
     void print();
@@ -46,7 +49,7 @@ Itinerary::Itinerary(string name, string city, Date arrival, Date departure){
 int Itinerary::totalFreeHours(){
     int hours = 0;
     for (int i = 0; i < vDays.size(); i++){
-        hours += vDays[i].freeHours();
+        hours += vDays[i].getFreeHours();
     }
     return hours;
 }
@@ -60,3 +63,4 @@ void Itinerary::print(){
     }
     cout << endl;
 }
+#endif

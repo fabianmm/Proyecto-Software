@@ -1,3 +1,6 @@
+#ifndef EVENT_H_INCLUDED
+#define EVENT_H_INCLUDED
+
 #include "Hour.h"
 
 class Event
@@ -5,7 +8,7 @@ class Event
 private:
     string name;
     string day;
-    Hour start
+    Hour start;
     Hour finish;
     int time;
 public:
@@ -21,7 +24,7 @@ public:
     int getTime();
     void print();
 };
-Event()
+Event::Event()
 {
     name = "N/A";
     day = "N/A";
@@ -75,3 +78,4 @@ void Event::print()
         cout << finish.minutes << endl;
     cout << "Total time: " << time << endl;
 }
+#endif

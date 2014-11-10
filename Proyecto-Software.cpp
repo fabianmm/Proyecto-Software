@@ -2,7 +2,9 @@
 #include <vector>
 #include <string>
 #include <fstream>
+
 using namespace std;
+
 #include "User.h"
 
 Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure) //prints a default template for each city & returns Itinerary
@@ -16,7 +18,7 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
     Hour auxHour;
     int auxInt;
     string auxString;
-    switch (cityNumber)
+    switch (cityNumber)//Para que son tantos switches?
     {
         case 1:
         {
@@ -26,9 +28,9 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
                 case 2:
                 {
                     archEnt.open("SFTemplate2.txt");
-                    
+
                     int numberOfEvents;
-                    
+
                     for (int i = 0; i < days; i++)
                     {
                         archEnt >> numberOfEvents;
@@ -48,16 +50,16 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
                             defaultItinerary.vDays[i].vEventList[j].setName(auxString);
                         }
                     }
-                    
+
                     archEnt.close();
                     defaultItinerary.print();
                     return defaultItinerary;
                 }
             }
         }
-            
-            
-            
+
+
+
     }
     return defaultItinerary;
 }
@@ -69,53 +71,54 @@ int main(){
     Date arrival, departure;
     Itinerary itinerario;
     //RF3
-    cout << "Â¿Desea crear un nuevo itinerario (si/no)?\n";
+    cout << "¿Desea crear un nuevo itinerario (si/no)?\n";
     cin >> response;
-    
+
     do
     {
         //RF4
-        cout << "Elija el nÃºmero de la ciudad a la que desea viajar:\n1. San Francisco\n2. Kyoto\n3. Las Vegas\n4. London\5. Guadalajara\n";
+        cout << "Elija el número de la ciudad a la que desea viajar:\n1. San Francisco\n2. Kyoto\n3. Las Vegas\n4. London\5. Guadalajara\n";
         cin >> cityNumber;
-        while (cityNumber < 1 || cityNumber > 3)
+        while (cityNumber < 1 || cityNumber > 6)
         {
-            cout << "Ese no es un nÃºmero vÃ¡lido, vuelva a ingresar un nÃºmero: ";
+            cout << "Ese no es un número válido, vuelva a ingresar un número: ";
             cin >> cityNumber;
         }
-        
-        switch (cityNumber)
+
+        switch (cityNumber)//Para que es el switch aqui?
         {
                 //RF5 & RF6
             case 1:
             {
-                cout << "Ingrese la cantidad de dÃ­as a viajar (entre 2 y 4): ";
+                cout << "Ingrese la cantidad de días a viajar (entre 2 y 4): ";
                 cin >> travelDays;
                 while (travelDays < 2 || travelDays > 4)
                 {
-                    cout << "Ese no es un nÃºmero vÃ¡lido, ingrese un nÃºmero entre 2 y 4: ";
+                    cout << "Ese no es un número válido, ingrese un número entre 2 y 4: ";
                     cin >> travelDays;
                 }
-                
-                cout << "Ingrese el dÃ­a de llegada(dd): ";
+
+                cout << "Ingrese el día de llegada(dd): ";
                 cin >> arrival.day;
                 cout << "Ingrese el mes de llegada(mm): ";
                 cin >> arrival.month;
-                cout << "Ingrese el aÃ±o de llegada(aaaa): ";
+                cout << "Ingrese el año de llegada(aaaa): ";
                 cin >> arrival.year;
                 departure.day = arrival.day + travelDays;
                 departure.month = arrival.month;
                 departure.year = arrival.year;
-                
+
                 //RF7
                 itinerario = defaultTemplate(cityNumber, travelDays, arrival, departure);
             }
-                
+                break;
+
             default:
-                cout << "Ese no es un nÃºmero vÃ¡lido, vuelva a ingresar un nÃºmero: ";
+                cout << "Ese no es un número válido, vuelva a ingresar un número: ";
                 cin >> cityNumber;
         }
-        
-        
-        
+
+
+
     }  while (response == "si" || response == "SI");
 }
