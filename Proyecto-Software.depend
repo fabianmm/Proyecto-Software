@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1415659780 source:c:\users\usuario\documents\github\proyecto-software\proyecto-software.cpp
+1415667781 source:c:\users\usuario\documents\github\proyecto-software\proyecto-software.cpp
 	<iostream>
 	<vector>
 	<string>
 	<fstream>
 	"User.h"
 
-1415660627 c:\users\usuario\documents\github\proyecto-software\user.h
+1415663081 c:\users\usuario\documents\github\proyecto-software\user.h
 	"Itinerary.h"
 
 1415661127 c:\users\usuario\documents\github\proyecto-software\itinerary.h
@@ -16,7 +16,7 @@
 
 1415660627 c:\users\usuario\documents\github\proyecto-software\date.h
 
-1415661149 c:\users\usuario\documents\github\proyecto-software\day.h
+1415661230 c:\users\usuario\documents\github\proyecto-software\day.h
 	"Event.h"
 
 1415660714 c:\users\usuario\documents\github\proyecto-software\event.h
