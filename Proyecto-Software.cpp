@@ -7,7 +7,7 @@ using namespace std;
 
 #include "User.h"
 
-Itinerary defaultTemplate(string cityName, string cityFile, int days, Date arrival, Date departure) //prints a default template for each city & returns Itinerary
+Itinerary defaultTemplate(string cityName, string cityFile, int days, Date arrival, Date departure) //Prints a default template for each city & returns Itinerary
 {
     ifstream archEnt;
     int auxInt, numberOfEvents;;
@@ -55,7 +55,7 @@ Itinerary defaultTemplate(string cityName, string cityFile, int days, Date arriv
         for (int j = 0; j < numberOfEvents; j++){
 
             archEnt >> auxHour.hour >> auxHour.minutes;
-            //cout << auxHour.hour << " " << auxHour.minutes << endl;
+            //cout << auxHour.hour << " " << auxHour.minutes << endl;//TRACE
             defaultItinerary.vDays[i].vEventList[j].setStart(auxHour);
             archEnt >> auxHour.hour >> auxHour.minutes;
             defaultItinerary.vDays[i].vEventList[j].setFinish(auxHour);
@@ -63,14 +63,14 @@ Itinerary defaultTemplate(string cityName, string cityFile, int days, Date arriv
             defaultItinerary.vDays[i].vEventList[j].setTime(auxInt);
             archEnt.ignore();
             getline(archEnt, auxString);
-            //cout << auxString << endl;
+            //cout << auxString << endl;//TRACE
             defaultItinerary.vDays[i].vEventList[j].setName(auxString);
         }
 //
 //======================================================================
         archEnt.close();//Closes File.
         defaultItinerary.print();//Uses a method from the Itinerary class to print out the Itinerary.
-        return defaultItinerary;//Returns and object of type Itinerary.
+        return defaultItinerary;//Returns and object of type Itinerary to be modified if the user wants to.
     }
 }
 
@@ -108,9 +108,9 @@ int main(){
             cin >> travelDays;
         }
 
-        switch (cityNumber)//Usesthe switch to send the right information to the function to create the default itinerary.
+        switch (cityNumber)//Uses the switch to send the right information to the function(defaultTemplate) to create the default itinerary.
         {
-                //RF5 & RF6
+            //RF5 & RF6
             case 1:
             {
                 cityName = "San Francisco";//City Name.
