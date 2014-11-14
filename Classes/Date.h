@@ -1,6 +1,3 @@
-#ifndef DATE_H_INCLUDED
-#define DATE_H_INCLUDED
-
 struct Date{
     int day = 1;
     int month = 1;
@@ -30,6 +27,5 @@ string dayOfWeek(Date d){ //regresar dia de la semana
         default:
             return "";
     }
-
+    
 }
-#endif

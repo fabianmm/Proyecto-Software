@@ -1,7 +1,4 @@
-#ifndef USER_H_INCLUDED
-#define USER_H_INCLUDED
-
-#include "Itinerary.h"
+#include "Itinerary"
 
 class User
 {
@@ -79,8 +76,6 @@ bool User::isAdmin()
 }
 /*void User::push()
 {
-	//Funcion Push??
+	//Funcion Push?? 
     //es para meter al archivo pero vamos a checar si se hace desde aqui o desde la aplicacion
 }*/
-
-#endif // WERWER_H_INCLUDED

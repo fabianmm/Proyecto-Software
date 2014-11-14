@@ -1,6 +1,3 @@
-#ifndef ITINERARY_H_INCLUDED
-#define ITINERARY_H_INCLUDED
-
 #include <vector>
 #include "Date.h"
 #include "Day.h"
@@ -9,31 +6,28 @@ class Itinerary {
 public:
     //Constructor
     Itinerary();
-    Itinerary(string name, string city, Date arrival, Date departure);
+    Itinerary(string, string, Date, Date);
     //Days attribute is public for easier manipulation
     vector<Day> vDays;
     //Access
     string getName(){return sName;};
-    string getCity(){return sCity;};
+    string getCity(){return sCity};
     Date getArrival(){return dArrival;};
-    Date getMiddleDay(){return dMiddleDay;};//Easier access to this day for changesin the itinerary.
     Date getDeparture(){return dDeparture;};
-    string getDayOfWeek(Date dDate){return dayOfWeek(dDate);};
-    Day getDays(int i){return vDays[i];};
     //Modifiers
-    void setName(string name){sName=name;};
-    void setCity(string city){sCity=city;};
-    void setArrival(Date arrival){dArrival=arrival;};
-    void setMiddleDay(Date middleDay){dMiddleDay=middleDay;};//Easier access to this day for changesin the itinerary.
-    void setDeparture(Date departure){dDeparture=departure;};
-    void setDays(int i, string sDay){vDays[i].setDayName(sDay);};
+    void setName(string){sName=name;};
+    void setCity(string){sCity=city};
+    void setArrival(Date){dArrival=arrival;};
+    void setDeparture(Date){dDeparture=departure;};
     //Other
     int totalFreeHours();
     void print();
 private:
     //Attributes
-    string sName,  sCity;
-    Date dArrival, dMiddleDay ,dDeparture;
+    string sName;
+    string sCity;
+    Date dArrival;
+    Date dDeparture;
 };
 
 Itinerary::Itinerary(){
@@ -45,8 +39,6 @@ Itinerary::Itinerary(string name, string city, Date arrival, Date departure){
     sName = name;
     sCity = city;
     dArrival = arrival;
-    dMiddleDay = arrival;
-    dMiddleDay.day += dMiddleDay.day + 1;
     dDeparture = departure;
 }
 
@@ -54,7 +46,7 @@ Itinerary::Itinerary(string name, string city, Date arrival, Date departure){
 int Itinerary::totalFreeHours(){
     int hours = 0;
     for (int i = 0; i < vDays.size(); i++){
-        hours += vDays[i].getFreeHours();//Como que no existe? ERROR======!!
+        hours += vDays[i].freeHours();
     }
     return hours;
 }
@@ -68,4 +60,3 @@ void Itinerary::print(){
     }
     cout << endl;
 }
-#endif
