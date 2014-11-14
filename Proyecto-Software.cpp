@@ -6,6 +6,35 @@
 using namespace std;
 
 #include "User.h"
+#include "Date.h"//Clase "Date" no esta compelta, No valida si es 31+, nocambia de mes, etc
+
+void cambioDeActividad(Itinerary &itinerario)
+{
+    //itinerario.print(); //Display for user.
+    int auxDiaCambio;
+    //RF9
+    cout << "Que dia quiere modificar sus actividades? 1)" << itinerario.getDayOfWeek(itinerario.getArrival()) << ". 2)";
+    cout << itinerario.getDayOfWeek(itinerario.getMiddleDay()) << ". 3)" << itinerario.getDayOfWeek(itinerario.getDeparture()) << ".\n";
+    cin >> auxDiaCambio;
+
+    //Verification.
+    while(auxDiaCambio < 1 || 3 < auxDiaCambio)
+    {
+        cout << "Ese no es un dia valido\n";
+        cout << "Porfavor introduzca un dia valido: ";
+        cin >> auxDiaCambio;
+    }
+
+    switch(auxDiaCambio)//Falta agregar funcionalidad a esta parte.
+    {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+    }
+}
 
 Itinerary defaultTemplate(string cityName, string cityFile, int days, Date arrival, Date departure) //Prints a default template for each city & returns Itinerary
 {
@@ -14,14 +43,18 @@ Itinerary defaultTemplate(string cityName, string cityFile, int days, Date arriv
     string auxString;
 
     //Sets the initial info for the defualt itinerary.
-    Itinerary defaultItinerary;
+    Itinerary defaultItinerary(cityFile, cityName, arrival, departure);
+
+/*Esta mejor iniciarlo con el constructor, en vez de llamar a todas las funciones una por una.
+
     defaultItinerary.setArrival(arrival);
     defaultItinerary.setDeparture(departure);
     defaultItinerary.setName("Default " + cityName);
     defaultItinerary.setCity(cityName);//Sets the name of the itinerary.
+*/
     defaultItinerary.vDays.resize(days);
     Hour auxHour;
-    
+
     switch (days)
     {
         case 2:
@@ -42,7 +75,7 @@ Itinerary defaultTemplate(string cityName, string cityFile, int days, Date arriv
             break;
 ===============================================*/
     }
-    
+
     archEnt.open(cityFile.c_str()); //c_str() is used so the file can be opened with the given string(Opens file).
 
 //Algorithm for taking the information out of the opened file (Defaults).
@@ -85,13 +118,14 @@ int main(){
     cout << "¿Desea crear un nuevo itinerario (si/no)?\n";
     cin >> response;
 //Keeps asking if he wants to create an itinerary(Default until now).
-    while(response == "si"  || response == "SI" || response == "Si"){
-
+    while(response == "si"  || response == "SI" || response == "Si")
+    {
         //RF4
         cout << "Elija el numero de la ciudad a la que desea viajar:\n1. San Francisco\n2. Kyoto\n3. Las Vegas\n4. London\5. Guadalajara\n";
         cin >> cityNumber;//Asksfor the cirt number(Used in the switch).
 
-        while (cityNumber < 1 || cityNumber > 1){
+        while (cityNumber < 1 || cityNumber > 1)
+        {
 //        while (cityNumber < 1 || cityNumber > 6){ ///////Until all files are added.
         //Loop to make the user type a valid number.
             cout << "Ese no es un numero valido, vuelva a ingresar un numero: ";
@@ -101,7 +135,8 @@ int main(){
         cout << "Ingrese el numero de dias que estara de visita entre 2 y 4: ";
         cin >> travelDays;
 
-        while (travelDays < 2 || travelDays > 2){
+        while (travelDays < 2 || travelDays > 2)
+        {
 //        while (travelDays < 2 || travelDays > 4){ //////UNTIL all files are added.
         //Loop to make hte user type a valid number.
             cout << "Ese no es un numero válido, ingrese un numero entre 2 y 4: ";
@@ -161,6 +196,21 @@ int main(){
 
         //RF7
         itinerario = defaultTemplate(cityName, cityFile, travelDays, arrival, departure);
+
+        //RF8
+        char auxResponse;
+
+        cout << "¿Desea cambiar algo del itinerario?(si/no)\n";
+        cin >> auxResponse;
+
+        switch(auxResponse)
+        {
+            case 's':
+                cambioDeActividad(itinerario);
+                break;
+            case 'n'://Falta la accionsidice que no.
+                break;
+        }
 
         //RF3
         cout << "¿Desea crear un nuevo itinerario (si/no)?\n";
