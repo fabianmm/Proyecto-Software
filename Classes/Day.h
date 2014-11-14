@@ -1,6 +1,3 @@
-#ifndef DAY_H_INCLUDED
-#define DAY_H_INCLUDED
-
 #include "Event.h"
 
 class Day
@@ -15,13 +12,13 @@ public:
     void setEventList(Event eEvent);
     //Access
     string getDayName();
-    int getFreeHours();
+    int getFreHours();
     Event getEventFromList(int eID);//Returns an specific object of type "Event"(If needed).
     //Attributes
     string sDayName;
     int iFreeHours;
     vector<Event> vEventList;
-
+    
     //Print
     void print();
 };
@@ -48,7 +45,7 @@ void Day::setEventList(Event eEvent){
 string Day::getDayName(){
     return sDayName;
 }
-int Day::getFreeHours(){
+int Day::getFreHours(){
     return iFreeHours;
 }
 Event Day::getEventFromList(int eID){
@@ -64,4 +61,3 @@ void Day::print()
         cout << endl;
     }
 }
-#endif
