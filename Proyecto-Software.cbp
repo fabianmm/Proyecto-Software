@@ -32,7 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="Country _City.txt" />
+		<Unit filename="Date.h" />
+		<Unit filename="Day.h" />
+		<Unit filename="Event.h" />
+		<Unit filename="Hour.h" />
+		<Unit filename="Itinerary.h" />
+		<Unit filename="Proyecto-Software.cpp" />
+		<Unit filename="User.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
