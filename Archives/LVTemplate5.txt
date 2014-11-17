@@ -4,18 +4,21 @@
 11
 0
 120
+LV0101
 Presa Hover
 12
 0
 15
 0
 180
+LV0201
 Lago Mead
 16
 0
 17
 0
 60
+LV0401
 Go Karts
 3
 12
@@ -23,18 +26,21 @@ Go Karts
 14
 0
 120
+LV0702
 Calle Fremont
 15
 0
 17
 0
 120
+LV1002
 Shopping
 20
 0
 1
 0
 180
+LV0302
 Casinos
 3
 10
@@ -42,18 +48,21 @@ Casinos
 12
 0
 120
+LV0803
 Gran Cañon
 13
 0
 15
 0
 120
+LV0603
 Espectáculos en hoteles
 15
 30
 17
 30
 120
+LV1003
 Shopping
 3
 12
@@ -61,17 +70,20 @@ Shopping
 15
 30
 180
+LV0904
 Golf
 21
 0
 22
 0
+LV0504
 Shows de magia
 23
 0
 2
 0
 180
+LV0304
 Casinos
 3
 12
@@ -79,16 +91,19 @@ Casinos
 14
 0
 120
+LV0705
 Calle Fremont
 15
 0
 17
 0
 120
+LV1005
 Shopping
 23
 0
 2
 0
 180
+LV0305
 Casinos
