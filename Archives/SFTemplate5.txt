@@ -1,77 +1,53 @@
 3
-12
-0
-12
+12 0 12 30
 30
-30
+SF1101
 Twitter Visit
-14
-0
-14
+14 0 14 30
 30
-30
+SF0801
 City Hall
-15
-0
-15
+15 0 15 30
 30
-30
+SF1201
 Lombard Street
 3
-9
-0
-12
-0
+9 0 12 0
 180
+SF0402
 Alcatraz
-13
-30
-14
-30
+13 30 14 30
 120
+SF0502
 Fisherman’s Warf
-15
-0
-16
-30
+15 0 16 30
 90
+SF0602
 Pier 39
 2
-9
-0
-11
-0
+9 0 11 0
 120
+SF0303
 Twin Peaks
-12
-0
-12
+12 0 12 30
 30
-30
+SF0103
 Golden Gate Bridge
 2
-16
-30
-17
-30
+16 30 17 30
 60
+SF0904
 Golden Gate Park
-18
-0
-19
-0
+18 0 19 0
 60
+SF1004
 Japanese Tea Garden
 2
-10
-30
-12
-30
+10 30 12 30
 120
+SF0705
 Chinatown
-14
-0
-17
-30
+14 0 17 30
 210
+SF0205
 Union Square Shopping
