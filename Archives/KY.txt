@@ -1,12 +1,5 @@
-5//Actividades en el dia.(Solo una vez en el template).
-8//Hora que empieza.
-0//Minutos de la hora que empieza
-11//Hora que termina.
-0//Minutos de la hora que termina.
-180//Tiempo en minutos.
-Alcatraz//Nomrbe de la actividad.
-
 Kyoto, Japan.
+
 Fushimi Inari Shrine
 300
 Zenrinji-temple, Eikan-do
