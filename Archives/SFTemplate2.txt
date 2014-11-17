@@ -1,62 +1,42 @@
 5
-8
-0
-11
-0
+8 0 11 0
 180
+SF0401
 Alcatraz
-11
-30
-13
-30
+11 30 13 30
 120
+SF0501
 Fisherman’s Warf
-14
-0
-15
-30
+14 0 15 30
 90
+SF0601
 Pier 39
-16
+16 30 17 0
 30
-17
-0
-30
+SF0801
 City Hall
-17
-30
-18
-30
+17 30 18 30
 60
+SF1001
 Japanese Tea Garden
 5
-8
-0
-9
-0
+8 0 9 0
 60
+SF0302
 Twin Peaks
-9
-30
-11
-30
+9 30 11 30
 120
+SF0102
 Golden Gate Bridge
-12
+12 30 13 0
 30
-13
-0
-30
+SF1102
 Twitter Visit
-14
-30
-16
-30
+14 30 16 30
 120
+SF0702
 Chinatown
-17
-0
-20
-30
+17 0 20 30
 210
+SF0202
 Union Square Shopping

@@ -1,28 +1,39 @@
-Kyoto, Japan.
-
 Fushimi Inari Shrine
 300
+KY0100
 Zenrinji-temple, Eikan-do
 180
+KY0200
 Kinkaku-ji Temple
 180
+KY0300
 Sanjusangendo Hall
 120
+KY0400
 Shugakuin Imperial Villa
 180
+KY0500
 Kiyomizu-dera Temple
 300
+KY0600
 Ninna-ji Temple
 180
+KY0700
 Ginkaku-ji Temple
 360
+KY0800
 Toei Kyoto Studio Park (Toei Uzumasa Eigamura)
 300
+KY0900
 WAK (Sushi, Tea, Sake)
 360
+KY1000
 Shopping
 120
+KY1100
 Hot Springs
 180
+KY1200
 Anime conventions
 180
+KY1300

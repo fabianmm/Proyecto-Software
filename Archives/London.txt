@@ -1,27 +1,39 @@
-Londres
 St. Paul's Cathedral
 60
+LD0100
 Houses of Parliament & Big Ben
 30
+LD0200
 Westminster Abbey
 30
+LD0300
 Churchill War Rooms
 45
+LD0400
 Trafalgar Square
 15
+LD0500
 National Gallery
 60
+LD0600
 Transport Museum
 60
+LD0700
 British Museum
 90
+LD0800
 Queen's Gallery
 60
+LD0900
 Buckingham Palace
 120
+LD1000
 Green Park
 15
+LD1100
 Hyde Park
 30
+LD1200
 National History Museum
 120
+LD1300

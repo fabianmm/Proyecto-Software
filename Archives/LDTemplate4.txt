@@ -4,24 +4,28 @@
 11
 0
 120
+LD1301
 National History Museum
 11
 30
 12
 0
 30
+LD0301
 Westminster Abbey
 12
 30
 13
 30
 60
+LD0101
 St. Paul's Cathedral
 13
 50
 14
 20
 30
+LD0201
 Houses of Parliament & Big Ben
 3
 10
@@ -29,18 +33,21 @@ Houses of Parliament & Big Ben
 12
 0
 120
+LD1002
 Buckingham Palace
 12
 30
 13
 0
 30
+LD1202
 Hyde Park
 13
 15
 13
 30
 15
+LD0502
 Trafalgar Square
 4
 10
@@ -48,23 +55,27 @@ Trafalgar Square
 11
 30
 60
+LD0903
 Queen's Gallery
 12
 0
 12
 45
+LD0403
 Churchill War Rooms
 13
 0
 14
 0
 60
+LD0703
 Transport Museum
 14
 15
 14
 30
 15
+LD1103
 Green Park
 2
 10
@@ -72,11 +83,13 @@ Green Park
 11
 30
 90
+LD0804
 British Museum
 12
 0
 13
 0
 60
+LD0604
 National Gallery
 

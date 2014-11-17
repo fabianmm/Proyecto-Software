@@ -162,6 +162,8 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
             defaultItinerary.vDays[i].vEventList[j].setFinish(auxHour);
             archEnt >> auxInt;
             defaultItinerary.vDays[i].vEventList[j].setTime(auxInt);
+            archEnt >> auxString;
+            defaultItinerary.vDays[i].vEventList[j].setCode(auxString);
             archEnt.ignore();
             getline(archEnt, auxString);
             //cout << auxString << endl;
@@ -177,19 +179,21 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
 void load() //carga archivos de actividades en vectores de Event
 {
     ifstream archive;
-    string name;
-    int time;
+    string auxString;
+    int auxInt;
     Event aux;
     
     //carga San Francisco
     archive.open("SanFrancisco.txt");
     while (!archive.eof())
     {
-        getline(archive, name);
-        archive >> time;
+        getline(archive, auxString);
+        aux.setName(auxString);
+        archive >> auxInt;
+        archive >> auxString;
         archive.ignore();
-        aux.setTime(time);
-        aux.setName(name);
+        aux.setTime(auxInt);
+        aux.setCode(auxString);
         SanFrancisco.push_back(aux);
     }
     archive.close();
@@ -198,11 +202,13 @@ void load() //carga archivos de actividades en vectores de Event
     archive.open("Kyoto.txt");
     while (!archive.eof())
     {
-        getline(archive, name);
-        archive >> time;
+        getline(archive, auxString);
+        aux.setName(auxString);
+        archive >> auxInt;
+        archive >> auxString;
         archive.ignore();
-        aux.setTime(time);
-        aux.setName(name);
+        aux.setTime(auxInt);
+        aux.setCode(auxString);
         Kyoto.push_back(aux);
     }
     archive.close();
@@ -211,11 +217,13 @@ void load() //carga archivos de actividades en vectores de Event
     archive.open("LasVegas.txt");
     while (!archive.eof())
     {
-        getline(archive, name);
-        archive >> time;
+        getline(archive, auxString);
+        aux.setName(auxString);
+        archive >> auxInt;
+        archive >> auxString;
         archive.ignore();
-        aux.setTime(time);
-        aux.setName(name);
+        aux.setTime(auxInt);
+        aux.setCode(auxString);
         LasVegas.push_back(aux);
     }
     archive.close();
@@ -224,11 +232,13 @@ void load() //carga archivos de actividades en vectores de Event
     archive.open("London.txt");
     while (!archive.eof())
     {
-        getline(archive, name);
-        archive >> time;
+        getline(archive, auxString);
+        aux.setName(auxString);
+        archive >> auxInt;
+        archive >> auxString;
         archive.ignore();
-        aux.setTime(time);
-        aux.setName(name);
+        aux.setTime(auxInt);
+        aux.setCode(auxString);
         London.push_back(aux);
     }
     archive.close();
@@ -237,11 +247,13 @@ void load() //carga archivos de actividades en vectores de Event
     archive.open("Guadalajara.txt");
     while (!archive.eof())
     {
-        getline(archive, name);
-        archive >> time;
+        getline(archive, auxString);
+        aux.setName(auxString);
+        archive >> auxInt;
+        archive >> auxString;
         archive.ignore();
-        aux.setTime(time);
-        aux.setName(name);
+        aux.setTime(auxInt);
+        aux.setCode(auxString);
         Guadalajara.push_back(aux);
     }
     archive.close();
@@ -253,7 +265,7 @@ void menuOpciones() //menu de opciones de actividades
     cout << "***Menu de Opciones***\n1. Agregar una actividad.\n2. Eliminar una actividad.\n3. Mover una actividad.\n0. Finalizar y enviar itinerario a correo.\nTeclee el número de la opción deseada: ";
 }
 
-void printEvents(vector<Event> aux) //imprimir lista de actividades, dado el ector de una ciudad
+void printEvents(vector<Event> aux)
 {
     cout << "#Lista de actividades#\n";
     cout << "Nombre\t Duración\t Código\n";
