@@ -5,6 +5,14 @@
 using namespace std;
 #include "User.h"
 
+//variables globales
+vector<Event>SanFrancisco;
+vector<Event>Kyoto;
+vector<Event>LasVegas;
+vector<Event>London;
+vector<Event>Guadalajara;
+
+
 Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure) //prints a default template for each city & returns Itinerary
 {
     ifstream archEnt;
@@ -36,6 +44,7 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
                     archEnt.open("SFTemplate5.txt");
                     break;
             }
+            break;
         }
         case 2:
         {
@@ -55,6 +64,7 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
                     archEnt.open("KTTemplate5.txt");
                     break;
             }
+            break;
         }
         case 3:
         {
@@ -74,6 +84,7 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
                     archEnt.open("LVTemplate5.txt");
                     break;
             }
+            break;
         }
         case 4:
         {
@@ -93,6 +104,7 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
                     archEnt.open("LDTemplate5.txt");
                     break;
             }
+            break;
         }
         case 5:
         {
@@ -112,6 +124,7 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
                     archEnt.open("GDTemplate5.txt");
                     break;
             }
+            break;
         }
             
     }
@@ -142,12 +155,103 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
     return defaultItinerary;
 }
 
+void load() //carga archivos de actividades en vectores de Event
+{
+    ifstream archive;
+    string name;
+    int time;
+    Event aux;
+    
+    //carga San Francisco
+    archive.open("SanFrancisco.txt");
+    while (!archive.eof())
+    {
+        getline(archive, name);
+        archive >> time;
+        archive.ignore();
+        aux.setTime(time);
+        aux.setName(name);
+        SanFrancisco.push_back(aux);
+    }
+    archive.close();
+    
+    //carga Kyoto
+    archive.open("Kyoto.txt");
+    while (!archive.eof())
+    {
+        getline(archive, name);
+        archive >> time;
+        archive.ignore();
+        aux.setTime(time);
+        aux.setName(name);
+        Kyoto.push_back(aux);
+    }
+    archive.close();
+    
+    //carga Las Vegas
+    archive.open("LasVegas.txt");
+    while (!archive.eof())
+    {
+        getline(archive, name);
+        archive >> time;
+        archive.ignore();
+        aux.setTime(time);
+        aux.setName(name);
+        LasVegas.push_back(aux);
+    }
+    archive.close();
+    
+    //carga London
+    archive.open("London.txt");
+    while (!archive.eof())
+    {
+        getline(archive, name);
+        archive >> time;
+        archive.ignore();
+        aux.setTime(time);
+        aux.setName(name);
+        London.push_back(aux);
+    }
+    archive.close();
+    
+    //carga Las Vegas
+    archive.open("Guadalajara.txt");
+    while (!archive.eof())
+    {
+        getline(archive, name);
+        archive >> time;
+        archive.ignore();
+        aux.setTime(time);
+        aux.setName(name);
+        Guadalajara.push_back(aux);
+    }
+    archive.close();
+    
+}
+
+void menuOpciones() //menu de opciones de actividades
+{
+    cout << "***Menu de Opciones***\n1. Agregar una actividad.\n2. Eliminar una actividad.\n3. Mover una actividad.\n0. Finalizar y enviar itinerario a correo.\nTeclee el número de la opción deseada: ";
+}
+
+void printEvents(vector<Event> aux) //imprimir lista de actividades, dado el ector de una ciudad
+{
+    cout << "#Lista de actividades#\n";
+    cout << "Nombre\t Duración\t Código\n";
+    for (int i = 0; i < aux.size(); i++)
+    {
+        
+    }
+}
 
 int main(){
     string response;
-    int cityNumber, travelDays;
+    int cityNumber, travelDays, option;
     Date arrival, departure;
     Itinerary itinerario;
+    
+    load(); //cargar archivos de actividades por ciudad en vectores globales de evento
+    
     //RF3
     cout << "¿Desea crear un nuevo itinerario (si/no)?\n";
     cin >> response;
@@ -155,7 +259,7 @@ int main(){
     do
     {
         //RF4
-        cout << "Elija el número de la ciudad a la que desea viajar:\n1. San Francisco\n2. Kyoto\n3. Las Vegas\n4. London\5. Guadalajara\n";
+        cout << "Elija el número de la ciudad a la que desea viajar:\n1. San Francisco\n2. Kyoto\n3. Las Vegas\n4. London\n5. Guadalajara\n";
         cin >> cityNumber;
         while (cityNumber < 1 || cityNumber > 5)
         {
@@ -184,8 +288,37 @@ int main(){
         //imprime y guarda el itinerario default
         itinerario = defaultTemplate(cityNumber, travelDays, arrival, departure);
         
+        menuOpciones(); //despliega menu de opciones y pide número de opcion
+        cin >> option;
+        while (option < 0 || option > 3)
+        {
+            cout << "Ese no es un número válido, por favor ingrese otra vez: ";
+            cin >> option;
+        }
+        while (option != 0) //mientras no desee finalizar, se haran modificaciones
+        {
+            switch (option)
+            {
+                case 1: //agregar una actividad
+                {
+                    //primero se despliegan las actividades de la ciudad
+                    
+                }
+                    
+            }
+        }
         
         
         
-    }  while (response == "si" || response == "SI");
+        
+        
+        
+        
+        
+        //Volver a preguntar si se desea crear otro itinerario
+        cout << "¿Desea crear un nuevo itinerario (si/no)?\n";
+        cin >> response;
+        
+    }  while (response == "si" || response == "SI" || response == "Si");
+    cout << "Adios.\n";
 }
