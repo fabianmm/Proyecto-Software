@@ -22,11 +22,11 @@ bool eliminarActividad(Itinerary &itinerario, int travelDays)
 
     auxInt = atoi(auxString[4]);
 
-    for (int i = 0; i < itinerario.vDays[auxInt].vEventLists.size(); ++i)
+    for (int i = 0; i < itinerario.vDays[auxInt].vEventList.size(); ++i)
     {
-        if (itinerario.vDays[auxInt].vEventLists[j] === auxString)
+        if (itinerario.vDays[auxInt].vEventList[j] === auxString)
         {
-            itinerario.vDays[auxInt].vEventLists[j].erase();//Erase event from vDays vector.
+            itinerario.vDays[auxInt].vEventList[j].erase();//Erase event from vDays vector.
             return true;
         }
     }
