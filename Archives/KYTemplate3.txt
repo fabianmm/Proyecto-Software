@@ -1,3 +1,28 @@
+4
+7
+0
+12
+0
+300
+Fushimi Inari Shrine
+12
+30
+15
+30
+180
+Ninna-ji Temple
+16
+0
+19
+0
+180
+Anime conventions
+19
+30
+22
+30
+180
+Hot Springs
 3
 9
 0
@@ -11,6 +36,25 @@ Toei Kyoto Studio Park (Toei Uzumasa Eigamura)
 30
 180
 Zenrinji-temple, Eikan-do
+18
+0
+21
+0
+180
+Hot Springs
+3
+10
+0
+15
+0
+300
+Kiyomizu-dera Temple
+15
+30
+17
+30
+120
+Shopping
 18
 0
 21

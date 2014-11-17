@@ -1,4 +1,67 @@
 3
+9
+0
+15
+30
+360
+WAK (Sushi, Tea, Sake)
+16
+0
+18
+0
+120
+Sanjusangendo Hall
+18
+30
+20
+30
+120
+Shopping
+3
+9
+0
+14
+0
+300
+Toei Kyoto Studio Park (Toei Uzumasa Eigamura)
+14
+30
+17
+30
+180
+Zenrinji-temple, Eikan-do
+18
+0
+21
+0
+180
+Hot Springs
+4
+7
+0
+12
+0
+300
+Fushimi Inari Shrine
+12
+30
+15
+30
+180
+Ninna-ji Temple
+16
+0
+19
+0
+180
+Anime conventions
+19
+30
+22
+30
+180
+Hot Springs
+3
 10
 0
 15
@@ -11,6 +74,19 @@ Kiyomizu-dera Temple
 30
 120
 Shopping
+18
+0
+21
+0
+180
+Hot Springs
+2
+9
+0
+14
+0
+300
+Toei Kyoto Studio Park (Toei Uzumasa Eigamura)
 18
 0
 21
