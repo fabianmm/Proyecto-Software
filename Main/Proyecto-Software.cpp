@@ -342,13 +342,6 @@ int main(){
             }
         }
         
-        
-        
-        
-        
-        
-        
-        
         //Volver a preguntar si se desea crear otro itinerario
         cout << "¿Desea crear un nuevo itinerario (si/no)?\n";
         cin >> response;
