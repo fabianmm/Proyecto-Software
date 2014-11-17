@@ -1,0 +1,72 @@
+4
+9
+0
+11
+0
+120
+Buckingham Palace
+11
+30
+12
+30
+60
+Transport Museum
+13
+0
+13
+30
+30
+Hyde Park
+13
+45
+14
+0
+15
+Trafalgar Square
+3
+10
+0
+11
+0
+60
+Queen's Gallery
+11
+25
+11
+40
+15
+Green Park
+12
+0
+14
+0
+120
+National History Museum
+4
+10
+0
+11
+0
+60
+St. Paul's Cathedral
+11
+30
+12
+0
+30
+Houses of Parliament & Big Ben
+12
+20
+12
+50
+30
+Westminster Abbey
+13
+15
+14
+0
+45
+Churchull War Rooms
+
+
+

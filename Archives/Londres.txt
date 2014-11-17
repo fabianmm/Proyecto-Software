@@ -1,0 +1,27 @@
+Londres
+St. Paul's Cathedral
+60
+Houses of Parliament & Big Ben
+30
+Westminster Abbey
+30
+Churchill War Rooms
+45
+Trafalgar Square
+15
+National Gallery
+60
+Transport Museum
+60
+British Museum
+90
+Queen's Gallery
+60
+Buckingham Palace
+120
+Green Park
+15
+Hyde Park
+30
+National History Museum
+120
