@@ -1,21 +1,30 @@
-Las Vegas
 Presa Hover
 120
+LV0100
 Lago Mead
 180
+LV0200
 Casinos
-1440
+240
+LV0300
 Go Karts
 60
+LV0400
 Shows de Magia
 90
+LV0500
 Espectáculos en hoteles
 120
+LV0600
 Calle Fremont
 120
+LV0700
 Gran Cañón
 120
+LV0800
 Golf
 180
+LV0900
 Shopping
 120
+LV1000
