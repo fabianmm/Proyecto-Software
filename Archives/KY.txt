@@ -1,0 +1,35 @@
+5//Actividades en el dia.(Solo una vez en el template).
+8//Hora que empieza.
+0//Minutos de la hora que empieza
+11//Hora que termina.
+0//Minutos de la hora que termina.
+180//Tiempo en minutos.
+Alcatraz//Nomrbe de la actividad.
+
+Kyoto, Japan.
+Fushimi Inari Shrine
+300
+Zenrinji-temple, Eikan-do
+180
+Kinkaku-ji Temple
+180
+Sanjusangendo Hall
+120
+Shugakuin Imperial Villa
+180
+Kiyomizu-dera Temple
+300
+Ninna-ji Temple
+180
+Ginkaku-ji Temple
+360
+Toei Kyoto Studio Park (Toei Uzumasa Eigamura)
+300
+WAK (Sushi, Tea, Sake)
+360
+Shopping
+120
+Hot Springs
+180
+Anime conventions
+180

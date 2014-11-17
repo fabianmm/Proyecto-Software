@@ -1,0 +1,19 @@
+3
+10
+0
+15
+0
+300
+Kiyomizu-dera Temple
+15
+30
+17
+30
+120
+Shopping
+18
+0
+21
+0
+180
+Hot Springs
