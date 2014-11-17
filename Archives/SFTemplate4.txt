@@ -1,0 +1,70 @@
+2
+12
+0
+12
+30
+30
+Twitter Visit
+15
+0
+15
+30
+30
+City Hall
+4
+9
+0
+11
+0
+120
+Twin Peaks
+12
+0
+12
+30
+30
+Golden Gate Bridge
+13
+30
+14
+30
+60
+Golden Gate Park
+16
+0
+17
+0
+60
+Japanese Tea Garden
+3
+9
+0
+12
+0
+180
+Alcatraz
+13
+30
+14
+30
+120
+Fisherman’s Warf
+15
+0
+16
+30
+90
+Pier 39
+2
+10
+30
+12
+30
+120
+Chinatown
+14
+0
+17
+30
+210
+Union Square Shopping
