@@ -34,13 +34,109 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
                     break;
                 case 5:
                     archEnt.open("SFTemplate5.txt");
+                    break;
+            }
+        }
+        case 2:
+        {
+            defaultItinerary.setCity("Kyoto");
+            switch (days)
+            {
+                case 2:
+                    archEnt.open("KTTemplate2.txt");
+                    break;
+                case 3:
+                    archEnt.open("KTTemplate3.txt");
+                    break;
+                case 4:
+                    archEnt.open("KTTemplate4.txt");
+                    break;
+                case 5:
+                    archEnt.open("KTTemplate5.txt");
+                    break;
+            }
+        }
+        case 3:
+        {
+            defaultItinerary.setCity("Las Vegas");
+            switch (days)
+            {
+                case 2:
+                    archEnt.open("LVTemplate2.txt");
+                    break;
+                case 3:
+                    archEnt.open("LVTemplate3.txt");
+                    break;
+                case 4:
+                    archEnt.open("LVTemplate4.txt");
+                    break;
+                case 5:
+                    archEnt.open("LVTemplate5.txt");
+                    break;
+            }
+        }
+        case 4:
+        {
+            defaultItinerary.setCity("London");
+            switch (days)
+            {
+                case 2:
+                    archEnt.open("LDTemplate2.txt");
+                    break;
+                case 3:
+                    archEnt.open("LDTemplate3.txt");
+                    break;
+                case 4:
+                    archEnt.open("LDTemplate4.txt");
+                    break;
+                case 5:
+                    archEnt.open("LDTemplate5.txt");
+                    break;
+            }
+        }
+        case 5:
+        {
+            defaultItinerary.setCity("Guadalajara");
+            switch (days)
+            {
+                case 2:
+                    archEnt.open("GDTemplate2.txt");
+                    break;
+                case 3:
+                    archEnt.open("GDTemplate3.txt");
+                    break;
+                case 4:
+                    archEnt.open("GDTemplate4.txt");
+                    break;
+                case 5:
+                    archEnt.open("GDTemplate5.txt");
+                    break;
             }
         }
             
-            
-            
-            
     }
+    
+    int numberOfEvents;
+    for (int i = 0; i < days; i++)
+    {
+        archEnt >> numberOfEvents;
+        defaultItinerary.vDays[i].vEventList.resize(numberOfEvents);
+        for (int j = 0; j < numberOfEvents; j++)
+        {
+            archEnt >> auxHour.hour >> auxHour.minutes;
+            //cout << auxHour.hour << " " << auxHour.minutes << endl;
+            defaultItinerary.vDays[i].vEventList[j].setStart(auxHour);
+            archEnt >> auxHour.hour >> auxHour.minutes;
+            defaultItinerary.vDays[i].vEventList[j].setFinish(auxHour);
+            archEnt >> auxInt;
+            defaultItinerary.vDays[i].vEventList[j].setTime(auxInt);
+            archEnt.ignore();
+            getline(archEnt, auxString);
+            //cout << auxString << endl;
+            defaultItinerary.vDays[i].vEventList[j].setName(auxString);
+        }
+    }
+    
     archEnt.close();
     defaultItinerary.print();
     return defaultItinerary;
