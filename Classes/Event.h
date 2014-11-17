@@ -8,6 +8,7 @@ private:
     Hour start
     Hour finish;
     int time;
+    string code;
 public:
     Event();
     Event(string a, string b, Hour c, Hour d, int e);
@@ -18,6 +19,8 @@ public:
     void setStart(Hour a);
     void setFinish(Hour a);
     void setTime(int a);
+    void setCode(string code);
+    string getCode();
     int getTime();
     void print();
 };
@@ -58,6 +61,14 @@ void Event::setTime(int a)
 int Event::getTime()
 {
     return time;
+}
+void Event::setCode(string code)
+{
+    this->code = code;
+}
+string Event::getCode()
+{
+    return code;
 }
 void Event::print()
 {
