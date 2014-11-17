@@ -13,20 +13,25 @@ vector<Event>LasVegas;
 vector<Event>London;
 vector<Event>Guadalajara;
 
-bool eliminarActividad(Itinerary &itinerario, int travelDays)
-{   
+bool eliminarActividad(Itinerary &itinerario)
+{
     int auxInt;
     string auxString = "";
     cout << "Que actividad deseas eliminar(ej.'KY0103')? ";
     cin >> auxString;
 
-    auxInt = atoi(auxString[4]);
+    string auxS = auxString.substr(5, 1);//Stores the Day number in a string var.
+    auxInt = atoi(auxS.c_str());
 
-    for (int i = 0; i < itinerario.vDays[auxInt].vEventList.size(); ++i)
+    for (int i = 0; i < itinerario.vDays[auxInt - 1].vEventList.size(); ++i)
     {
-        if (itinerario.vDays[auxInt].vEventList[j] === auxString)
+//      cout << "TRACE 7." << endl;
+//      cout << "=====" << itinerario.vDays[auxInt - 1].vEventList[i].getCode() << "======";
+
+        if (itinerario.vDays[auxInt - 1].vEventList[i].getCode() == auxString)
         {
-            itinerario.vDays[auxInt].vEventList[j].erase();//Erase event from vDays vector.
+            cout << "TRACE 6.";
+            //itinerario.vDays[auxInt - 1].vEventList.erase(i);//Erase event from vDays vector.//Not working???
             return true;
         }
     }
@@ -145,9 +150,9 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
             }
             break;
         }
-            
+
     }
-    
+
     int numberOfEvents;
     for (int i = 0; i < days; i++)
     {
@@ -170,7 +175,7 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
             defaultItinerary.vDays[i].vEventList[j].setName(auxString);
         }
     }
-    
+
     archEnt.close();
     defaultItinerary.print();
     return defaultItinerary;
@@ -182,9 +187,9 @@ void load() //carga archivos de actividades en vectores de Event
     string auxString;
     int auxInt;
     Event aux;
-    
+    cout << "Trace 000:";
     //carga San Francisco
-    archive.open("SanFrancisco.txt");
+    archive.open("SF.txt");
     while (!archive.eof())
     {
         getline(archive, auxString);
@@ -195,9 +200,10 @@ void load() //carga archivos de actividades en vectores de Event
         aux.setTime(auxInt);
         aux.setCode(auxString);
         SanFrancisco.push_back(aux);
+           cout << "Trace 0:";
     }
     archive.close();
-    
+
     //carga Kyoto
     archive.open("Kyoto.txt");
     while (!archive.eof())
@@ -210,9 +216,10 @@ void load() //carga archivos de actividades en vectores de Event
         aux.setTime(auxInt);
         aux.setCode(auxString);
         Kyoto.push_back(aux);
+            cout << "Trace 1:";
     }
     archive.close();
-    
+
     //carga Las Vegas
     archive.open("LasVegas.txt");
     while (!archive.eof())
@@ -225,9 +232,10 @@ void load() //carga archivos de actividades en vectores de Event
         aux.setTime(auxInt);
         aux.setCode(auxString);
         LasVegas.push_back(aux);
+        cout << "Trace 2:";
     }
     archive.close();
-    
+
     //carga London
     archive.open("London.txt");
     while (!archive.eof())
@@ -240,9 +248,10 @@ void load() //carga archivos de actividades en vectores de Event
         aux.setTime(auxInt);
         aux.setCode(auxString);
         London.push_back(aux);
+        cout << "Trace 3:";
     }
     archive.close();
-    
+
     //carga Las Vegas
     archive.open("Guadalajara.txt");
     while (!archive.eof())
@@ -255,9 +264,10 @@ void load() //carga archivos de actividades en vectores de Event
         aux.setTime(auxInt);
         aux.setCode(auxString);
         Guadalajara.push_back(aux);
+        cout << "Trace 4:";
     }
     archive.close();
-    
+
 }
 
 void menuOpciones() //menu de opciones de actividades
@@ -271,7 +281,7 @@ void printEvents(vector<Event> aux)
     cout << "Nombre\t Duración\t Código\n";
     for (int i = 0; i < aux.size(); i++)
     {
-        
+
     }
 }
 
@@ -280,13 +290,13 @@ int main(){
     int cityNumber, travelDays, option;
     Date arrival, departure;
     Itinerary itinerario;
-    
-    load(); //cargar archivos de actividades por ciudad en vectores globales de evento
-    
+
+    //load(); //cargar archivos de actividades por ciudad en vectores globales de evento
+
     //RF3
     cout << "¿Desea crear un nuevo itinerario (si/no)?\n";
     cin >> response;
-    
+
     do
     {
         //RF4
@@ -305,7 +315,7 @@ int main(){
             cout << "Ese no es un número válido, ingrese un número entre 2 y 4: ";
             cin >> travelDays;
         }
-        
+
         cout << "Ingrese el día de llegada(dd): ";
         cin >> arrival.day;
         cout << "Ingrese el mes de llegada(mm): ";
@@ -315,37 +325,39 @@ int main(){
         departure.day = arrival.day + travelDays;
         departure.month = arrival.month;
         departure.year = arrival.year;
-        
+
         //imprime y guarda el itinerario default
         itinerario = defaultTemplate(cityNumber, travelDays, arrival, departure);
-        
-        menuOpciones(); //despliega menu de opciones y pide número de opcion
-        cin >> option;
-        while (option < 0 || option > 3)
+
+        do
         {
-            cout << "Ese no es un número válido, por favor ingrese otra vez: ";
+            menuOpciones(); //despliega menu de opciones y pide número de opcion
             cin >> option;
-        }
-        while (option != 0) //mientras no desee finalizar, se haran modificaciones
-        {
+
+            while (option < 0 || option > 3)
+            {
+                cout << "Ese no es un número válido, por favor ingrese otra vez: ";
+                cin >> option;
+            }
+
             switch (option)
             {
                 case 1: //agregar una actividad
                 {
                     //primero se despliegan las actividades de la ciudad
-                    
+
                 }
                 case 2://Eliminar actividad.
-                    eliminarActividad(itinerario, travelDays);
+                    eliminarActividad(itinerario);
                     break;
-                    
+
             }
-        }
-        
+        }while (option != 0); //mientras no desee finalizar, se haran modificaciones
+
         //Volver a preguntar si se desea crear otro itinerario
         cout << "¿Desea crear un nuevo itinerario (si/no)?\n";
         cin >> response;
-        
+
     }  while (response == "si" || response == "SI" || response == "Si");
     cout << "Adios.\n";
 }
