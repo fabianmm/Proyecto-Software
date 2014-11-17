@@ -1,24 +1,36 @@
 Golden Gate Bridge
 120
+SF0100
 Union Square Shopping
 210
+SF0200
 Twin Peaks
 60
+SF0300
 Alcatraz
 180
+SF0400
 Fisherman’s Warf
 120
+SF0500
 Pier 39
 90
+SF0600
 Chinatown
 120
+SF0700
 City Hall
 30
+SF0800
 Golden Gate Park
 60
+SF0900
 Japanese Tea Garden
 60
+SF1000
 Twitter Visit
 30
+SF1100
 Lombard Street
 30
+SF1200

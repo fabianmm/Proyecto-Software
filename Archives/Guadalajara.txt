@@ -1,5 +1,17 @@
-Ruta de tequila120Lago de Chapala Agilice90Compras en Tonalá y Tlaquepaque60Guachimontones Zona Arqueológica90Recorrido Turístico del Tequila Express90Guadalajara Calandria60Aventura por el rio de la selva60Volcán de fuego60Paseo por la ciudad120Tlaquepaque y Fabrica de Tequila120
+Ruta de tequila120
+GD0100Lago de Chapala Agilice90
+GD0200Compras en Tonalá y Tlaquepaque60
+GD0300Guachimontones Zona Arqueológica90
+GD0400Tequila Express90
+GD0500Guadalajara Calandria60
+GD0600Rio de la selva60
+GD0700Volcán de fuego60
+GD0800Paseo por la ciudad120
+GD0900Tlaquepaque y Fabrica de Tequila120
+GD1000
 Estadio Omnilife
 120
+GD1100
 Plaza Andares
-120
+120
+GD1200
