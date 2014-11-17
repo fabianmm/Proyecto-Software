@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <stdlib.h>//atoi (Converts string to int)
 using namespace std;
 #include "User.h"
 
@@ -12,7 +13,25 @@ vector<Event>LasVegas;
 vector<Event>London;
 vector<Event>Guadalajara;
 
+bool eliminarActividad(Itinerary &itinerario, int travelDays)
+{   
+    int auxInt;
+    string auxString = "";
+    cout << "Que actividad deseas eliminar(ej.'KY0103')? ";
+    cin >> auxString;
 
+    auxInt = atoi(auxString[4]);
+
+    for (int i = 0; i < itinerario.vDays[auxInt].vEventLists.size(); ++i)
+    {
+        if (itinerario.vDays[auxInt].vEventLists[j] === auxString)
+        {
+            itinerario.vDays[auxInt].vEventLists[j].erase();//Erase event from vDays vector.
+            return true;
+        }
+    }
+    return false;
+}
 Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure) //prints a default template for each city & returns Itinerary
 {
     ifstream archEnt;
@@ -52,16 +71,16 @@ Itinerary defaultTemplate(int cityNumber, int days, Date arrival, Date departure
             switch (days)
             {
                 case 2:
-                    archEnt.open("KTTemplate2.txt");
+                    archEnt.open("KYTemplate2.txt");
                     break;
                 case 3:
-                    archEnt.open("KTTemplate3.txt");
+                    archEnt.open("KYTemplate3.txt");
                     break;
                 case 4:
-                    archEnt.open("KTTemplate4.txt");
+                    archEnt.open("KYTemplate4.txt");
                     break;
                 case 5:
-                    archEnt.open("KTTemplate5.txt");
+                    archEnt.open("KYTemplate5.txt");
                     break;
             }
             break;
@@ -304,6 +323,9 @@ int main(){
                     //primero se despliegan las actividades de la ciudad
                     
                 }
+                case 2://Eliminar actividad.
+                    eliminarActividad(itinerario, travelDays);
+                    break;
                     
             }
         }

@@ -4,8 +4,8 @@ class Day
 {
 public:
     //Consutructors
-    Day(string sDName, int iFHours);
     Day();
+    Day(string sDName, int iFHours);
     //Modify
     void setDayName(string sDName);
     void setFreeHours(int iFHours);
@@ -51,7 +51,6 @@ int Day::getFreHours(){
 Event Day::getEventFromList(int eID){
     return vEventList[eID];
 }
-
 void Day::print()
 {
     //cout << sDayName << endl;
