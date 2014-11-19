@@ -298,7 +298,7 @@ void load() //carga archivos de actividades en vectores de Event
 
 void menuOpciones() //menu de opciones de actividades
 {
-    cout << "***Menu de Opciones***\n1. Agregar una actividad.\n2. Eliminar una actividad.\n3. Mover una actividad.\n0. Finalizar y enviar itinerario a correo.\nTeclee el número de la opción deseada: ";
+    cout << "***Menu de Opciones***\n1. Agregar una actividad.\n2. Eliminar una actividad.\n3. Mover una actividad.\n4. Intercambiar una actividad.\n0. Finalizar y enviar itinerario a correo.\nTeclee el número de la opción deseada: ";
 }
 
 void menuSistema() //menu del sistema
@@ -313,10 +313,10 @@ void menuSistema() //menu del sistema
 void printEvents(vector<Event> aux)
 {
     cout << "#Lista de actividades#\n";
-    cout << "Nombre\t Duración\t Código\n";
+    cout << "Nombre\t | Duración\t | Código\n";
     for (int i = 0; i < aux.size(); i++)
     {
-        
+        cout << aux[i].getName() << " | " << aux[i].getTime() << " | " << aux[i].getCode() << endl;
     }
 }
 
@@ -505,7 +505,7 @@ int main(){
                         menuOpciones(); //despliega menu de opciones y pide número de opcion
                         cin >> option;
                         
-                        while (option < 0 || option > 3)
+                        while (option < 0 || option > 4)
                         {
                             cout << "Ese no es un número válido, por favor ingrese otra vez: ";
                             cin >> option;
@@ -524,9 +524,19 @@ int main(){
                                 
                                 break;
                             }
-                            case 0:
+                            case 3://Mover una actividad
                             {
                                 
+                            }
+                            case 4: //Intercambiar una actividad
+                            {
+                                
+                            }
+                            case 0:
+                            {
+                                cout << "El itinerario " <<  itinerario.getName() << " se enviará al correo " << usuario.getEmail() << endl;
+                                cout << "Listo!\n";
+                                break;
                             }
                                 
                         }
