@@ -23,7 +23,7 @@ bool eliminarActividad(Itinerary &itinerario)
     cin >> auxString;
     
     string auxS = auxString.substr(5, 1);//Stores the Day number in a string var.
-    auxInt = atoi(auxS.c_str());
+    auxInt = stoi(auxS.c_str());
     
     for (int i = 0; i < itinerario.vDays[auxInt - 1].vEventList.size(); ++i)
     {
@@ -32,9 +32,10 @@ bool eliminarActividad(Itinerary &itinerario)
         
         if (itinerario.vDays[auxInt - 1].vEventList[i].getCode() == auxString)
         {
-//           cout << "TRACE 6.";
+            //           cout << "TRACE 6.";
             itinerario.vDays[auxInt - 1].vEventList.erase(itinerario.vDays[auxInt - 1].vEventList.begin() + i);//Erase event from vDays vector.//Not working???
-//            itinerario.print();
+            cout << "\n===ITINERARIO ACTUALIZADO===\n";
+            itinerario.print();
             return true;
         }
     }
@@ -279,7 +280,7 @@ void load() //carga archivos de actividades en vectores de Event
     
     //carga Usuarios
     archive.open("Usuarios.txt");
-    while (! archive.eof())
+    while (!archive.eof())
     {
         getline(archive,auxString);
         auxUser.setEmail(auxString);
@@ -288,9 +289,9 @@ void load() //carga archivos de actividades en vectores de Event
         getline(archive, auxString);
         auxUser.setName(auxString);
         Usuarios.push_back(auxUser);
-        archive.ignore();
+        //archive.ignore();
     }
-    
+    archive.ignore();
     archive.close();
     
 }
@@ -520,6 +521,7 @@ int main(){
                             case 2://Eliminar actividad.
                             {
                                 eliminarActividad(itinerario);
+                                
                                 break;
                             }
                             case 0:
@@ -544,7 +546,7 @@ int main(){
                         break;
                     }
                 }
-
+                
                 cout << "Adios " << usuario.getName() << endl;
                 break;
             }
