@@ -1,4 +1,3 @@
-#include <vector>
 #include "Date.h"
 #include "Day.h"
 
@@ -11,14 +10,14 @@ public:
     vector<Day> vDays;
     //Access
     string getName(){return sName;};
-    string getCity(){return sCity};
+    string getCity(){return sCity;};
     Date getArrival(){return dArrival;};
     Date getDeparture(){return dDeparture;};
     //Modifiers
-    void setName(string){sName=name;};
-    void setCity(string){sCity=city};
-    void setArrival(Date){dArrival=arrival;};
-    void setDeparture(Date){dDeparture=departure;};
+    void setName(string name){sName=name;};
+    void setCity(string city){sCity=city;};
+    void setArrival(Date arrival){dArrival=arrival;};
+    void setDeparture(Date departure){dDeparture=departure;};
     //Other
     int totalFreeHours();
     void print();
@@ -46,17 +45,17 @@ Itinerary::Itinerary(string name, string city, Date arrival, Date departure){
 int Itinerary::totalFreeHours(){
     int hours = 0;
     for (int i = 0; i < vDays.size(); i++){
-        hours += vDays[i].freeHours();
+        hours += vDays[i].iFreeHours;
     }
     return hours;
 }
 
 void Itinerary::print(){
     cout << "\"" << sName << "\""
-        << "\nCity: " << sCity
+    << "\nCity: " << sCity
     << "\n" << dArrival.month << "/" << dArrival.day << "/" << dArrival.year << " - " << dDeparture.month << "/" << dDeparture.day << "/" << dDeparture.year << endl;
     for (int i = 0; i < vDays.size(); i++){
+        cout << "*** Day " << i+1 << " ***" << endl;
         vDays[i].print();
     }
-    cout << endl;
 }

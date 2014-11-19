@@ -5,7 +5,7 @@ class Event
 private:
     string name;
     string day;
-    Hour start
+    Hour start;
     Hour finish;
     int time;
     string code;
@@ -24,7 +24,7 @@ public:
     int getTime();
     void print();
 };
-Event()
+Event::Event()
 {
     name = "N/A";
     day = "N/A";
@@ -72,17 +72,17 @@ string Event::getCode()
 }
 void Event::print()
 {
-    cout << name << endl;
+    cout << name << " (" << code << ")" <<endl;
     //cout << "Day: " << day << endl;
-    cout << "Starting time: " << start.hour << ":";
+    cout << start.hour << ":";
     if (start.minutes == 0)
-        cout << "00" << endl;
+        cout << "00";
     else
-        cout << start.minutes << endl;
-    cout << "Finish time: " << finish.hour << ":";
+        cout << start.minutes;
+    cout << " - " << finish.hour << ":";
     if (finish.minutes == 0)
         cout << "00" << endl;
     else
         cout << finish.minutes << endl;
-    cout << "Total time: " << time << endl;
+    cout << "Total time: " << time << " min" << endl;
 }
