@@ -17,6 +17,8 @@ public:
     void setDay(string a);
     string getDay();
     void setStart(Hour a);
+    Hour getStart();
+    Hour getFinish();
     void setFinish(Hour a);
     void setTime(int a);
     void setCode(string code);
@@ -69,6 +71,15 @@ void Event::setCode(string code)
 string Event::getCode()
 {
     return code;
+}
+Hour Event::getStart()
+{
+    return start;
+}
+
+Hour Event::getFinish()
+{
+    return finish;
 }
 void Event::print()
 {
