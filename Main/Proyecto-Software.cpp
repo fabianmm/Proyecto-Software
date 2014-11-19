@@ -30,8 +30,9 @@ bool eliminarActividad(Itinerary &itinerario)
 
         if (itinerario.vDays[auxInt - 1].vEventList[i].getCode() == auxString)
         {
-            cout << "TRACE 6.";
-            //itinerario.vDays[auxInt - 1].vEventList.erase(i);//Erase event from vDays vector.//Not working???
+//           cout << "TRACE 6.";
+            itinerario.vDays[auxInt - 1].vEventList.erase(itinerario.vDays[auxInt - 1].vEventList.begin() + i);//Erase event from vDays vector.//Not working???
+//            itinerario.print();
             return true;
         }
     }
@@ -347,8 +348,11 @@ int main(){
                     //primero se despliegan las actividades de la ciudad
 
                 }
+                    break;
                 case 2://Eliminar actividad.
+                {
                     eliminarActividad(itinerario);
+                }
                     break;
 
             }
