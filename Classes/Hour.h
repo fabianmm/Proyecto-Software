@@ -6,6 +6,7 @@ struct Hour {
     bool operator>(Hour h);
     bool operator<(Hour h);
     Hour operator+(int m);
+    bool operator==(Hour h);
 };
 
 void Hour::operator=(Hour h){
@@ -36,6 +37,12 @@ bool Hour::operator<(Hour h){
     return false;
 }
 
+bool Hour::operator==(Hour h)
+{
+    if (h.hour == this-> hour && h.minutes == this-> minutes)
+        return true;
+    return false;
+}
 Hour Hour::operator+(int m){
     Hour r;
     r.hour = (hour+((minutes+m)/60))%24;
