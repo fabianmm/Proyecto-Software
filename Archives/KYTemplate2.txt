@@ -18,13 +18,14 @@ Ninna-ji Temple
 19
 0
 180
-
+KY1301
 Anime conventions
 19
 30
 22
 30
 180
+KY1201
 Hot Springs
 2
 9
@@ -32,10 +33,12 @@ Hot Springs
 14
 0
 300
+KY0902
 Toei Kyoto Studio Park (Toei Uzumasa Eigamura)
 18
 0
 21
 0
 180
+KY1202
 Hot Springs

@@ -4,18 +4,21 @@
 15
 30
 360
+KY1001
 WAK (Sushi, Tea, Sake)
 16
 0
 18
 0
 120
+KY0401
 Sanjusangendo Hall
 18
 30
 20
 30
 120
+KY1101
 Shopping
 3
 9
@@ -23,18 +26,21 @@ Shopping
 14
 0
 300
+KY0902
 Toei Kyoto Studio Park (Toei Uzumasa Eigamura)
 14
 30
 17
 30
 180
+KY0202
 Zenrinji-temple, Eikan-do
 18
 0
 21
 0
 180
+KY1202
 Hot Springs
 4
 7
@@ -42,24 +48,28 @@ Hot Springs
 12
 0
 300
+KY0103
 Fushimi Inari Shrine
 12
 30
 15
 30
 180
+KY0703
 Ninna-ji Temple
 16
 0
 19
 0
 180
+KY1303
 Anime conventions
 19
 30
 22
 30
 180
+KY1203
 Hot Springs
 3
 10
@@ -67,18 +77,21 @@ Hot Springs
 15
 0
 300
+KY0604
 Kiyomizu-dera Temple
 15
 30
 17
 30
 120
+KY1104
 Shopping
 18
 0
 21
 0
 180
+KY1204
 Hot Springs
 2
 9
@@ -86,10 +99,12 @@ Hot Springs
 14
 0
 300
+KY0905
 Toei Kyoto Studio Park (Toei Uzumasa Eigamura)
 18
 0
 21
 0
 180
+KY1205
 Hot Springs
