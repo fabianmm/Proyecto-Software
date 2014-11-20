@@ -5,6 +5,7 @@ struct Hour {
     int totalMinutes();
     bool operator>(Hour h);
     bool operator<(Hour h);
+    Hour operator+(int m);
 };
 
 void Hour::operator=(Hour h){
@@ -33,4 +34,11 @@ bool Hour::operator<(Hour h){
     if (minA < minB)
         return true;
     return false;
+}
+
+Hour Hour::operator+(int m){
+    Hour r;
+    r.hour = (hour+((minutes+m)/60))%24;
+    r.minutes =(minutes+m)%60;
+    return r;
 }

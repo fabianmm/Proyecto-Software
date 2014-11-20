@@ -15,6 +15,97 @@ vector<Event>Guadalajara;
 vector<User>Usuarios;
 
 
+
+
+
+Event findEvent(string auxT, Itinerary &itinerario, int &iPos, int &iPos2)//Return an Event found by "Code".
+{
+    int auxInt;
+    
+    string auxS = auxT.substr(5, 1);//Stores the Day number in a string var.
+    auxInt = atoi(auxS.c_str());//For Windows.
+    //    auxInt = stoi(auxT.c_str());//For Mac.
+    
+    iPos = auxInt - 1;//Position in vDays in which the event is located.
+    //cout << "Trace 0001";
+    for (int i = 0; i < itinerario.vDays[iPos].vEventList.size(); ++i)//Looks in an specific day given by the code.
+    {
+        //cout << "Trace 0002";
+        if (itinerario.vDays[iPos].vEventList[i].getCode() == auxT)//Looks for the event in the vDays vector.
+        {
+            //cout << "Trace 0003";
+            iPos2 = i;//Position in which the event was found in the vEventList.
+            return itinerario.vDays[iPos].vEventList[i];//Returns the Event.
+        }
+    }
+    Event e;
+    return e;
+}
+void moverActividad(Itinerary &itinerario)
+{
+    Event auxEvent, auxEvent2;
+    string auxS, auxS2;
+    int iPos, iPos2, auxPos, auxPos2;
+    
+    cout << "Cual es el codigo de la actividad que desea mover? " << endl;
+    cin >> auxS;
+    cout << "Por que actividad desea cambiarla(Codigo)? " << endl;
+    cin >> auxS2;
+    
+    auxEvent = findEvent(auxS, itinerario, iPos, iPos2);//Stores the Event 1
+    cout << "Trace 0004";
+    auxPos = iPos;//Position
+    auxPos2 = iPos2;//Position.
+    //  auxEvent.print();
+    cout << "Trace 0005";
+    auxEvent2 = findEvent(auxS2, itinerario, iPos, iPos2);//Stores event 2.
+    //  auxEvent2.print();
+    
+    itinerario.vDays[auxPos].vEventList[auxPos2] = auxEvent2;//Swap. en el 1 queda el 2
+    itinerario.vDays[iPos].vEventList[iPos2] = auxEvent;//Swap. en el 2 queda el 1
+    
+    itinerario.vDays[auxPos].vEventList[auxPos2].setCode(auxS2);
+    itinerario.vDays[iPos].vEventList[iPos2].setCode(auxS); //Intercambiar codigos
+    
+    Hour auxHour = itinerario.vDays[auxPos].vEventList[auxPos2].getStart(); // Hora del 2
+    Hour auxHour2 = itinerario.vDays[iPos].vEventList[iPos2].getStart(); //Hora del 1
+    
+    itinerario.vDays[auxPos].vEventList[auxPos2].setStart(auxHour2);
+    itinerario.vDays[auxPos].vEventList[auxPos2].setFinish(auxHour2+auxEvent2.getTime());
+    
+    itinerario.vDays[iPos].vEventList[iPos2].setStart(auxHour);
+    itinerario.vDays[iPos].vEventList[iPos2].setFinish(auxHour+auxEvent.getTime());
+    
+    //=====================================Verification===================================================
+    
+    if (!(auxPos2 - 1 < 0) && ((auxPos2 + 1) <= (itinerario.vDays[auxPos].vEventList.size() )))
+    {
+        if (itinerario.vDays[auxPos].vEventList[auxPos2 - 1].getFinish().hour < itinerario.vDays[auxPos].vEventList[auxPos2].getStart().hour)
+        {
+            if (itinerario.vDays[auxPos].vEventList[auxPos2 - 1].getFinish().minutes < itinerario.vDays[auxPos].vEventList[auxPos2].getStart().minutes)
+            {
+                itinerario.vDays[auxPos].vEventList[auxPos2] = auxEvent2;
+            }
+        }
+    }
+    if (!(auxPos2 - 1 < 0) && ((iPos2 + 1) <= (itinerario.vDays[iPos].vEventList.size() )))
+    {
+        if (itinerario.vDays[iPos].vEventList[iPos2 - 1].getFinish().hour < itinerario.vDays[iPos].vEventList[iPos2].getStart().hour)
+        {
+            if (itinerario.vDays[iPos].vEventList[iPos2 - 1].getFinish().minutes < itinerario.vDays[iPos].vEventList[iPos2].getStart().minutes)
+            {
+                itinerario.vDays[iPos].vEventList[iPos2] = auxEvent;
+            }
+        }
+    }
+    
+    itinerario.print();
+}
+
+
+
+
+
 bool eliminarActividad(Itinerary &itinerario)
 {
     int auxInt;
@@ -298,7 +389,7 @@ void load() //carga archivos de actividades en vectores de Event
 
 void menuOpciones() //menu de opciones de actividades
 {
-    cout << "***Menu de Opciones***\n1. Agregar una actividad.\n2. Eliminar una actividad.\n3. Mover una actividad.\n4. Intercambiar una actividad.\n0. Finalizar y enviar itinerario a correo.\nTeclee el número de la opción deseada: ";
+    cout << "***Menu de Opciones***\n1. Agregar una actividad.\n2. Eliminar una actividad.\n3. Intercambiar una actividad.\n0. Finalizar y enviar itinerario a correo.\nTeclee el número de la opción deseada: ";
 }
 
 void menuSistema() //menu del sistema
@@ -505,7 +596,7 @@ int main(){
                         menuOpciones(); //despliega menu de opciones y pide número de opcion
                         cin >> option;
                         
-                        while (option < 0 || option > 4)
+                        while (option < 0 || option > 3)
                         {
                             cout << "Ese no es un número válido, por favor ingrese otra vez: ";
                             cin >> option;
@@ -526,12 +617,15 @@ int main(){
                             }
                             case 3://Mover una actividad
                             {
-                                
+                                moverActividad(itinerario);
+                                /*Hour auxHour;
+                                 int duration;
+                                 Event auxEvent;
+                                 int dia = 2;
+                                 insert(itinerario, auxHour, duration, auxEvent, dia);*/
+                                break;
                             }
-                            case 4: //Intercambiar una actividad
-                            {
                                 
-                            }
                             case 0:
                             {
                                 cout << "El itinerario " <<  itinerario.getName() << " se enviará al correo " << usuario.getEmail() << endl;
